@@ -1,0 +1,44 @@
+============================================================
+APOPTOTIC GENE LIST - SOURCE BREAKDOWN SUMMARY
+Generated: 2026-01-27 15:11:25
+============================================================
+
+
+KEGG
+----------------------------------------
+  Pro-apoptotic       :   13 genes
+  Anti-apoptotic      :   17 genes
+  Ambiguous           :   17 genes
+  Unspecified         :   37 genes
+  TOTAL               :   84 genes
+
+Reactome
+----------------------------------------
+  Pro-apoptotic       :   47 genes
+  Anti-apoptotic      :   24 genes
+  Ambiguous           :   24 genes
+  Unspecified         :  120 genes
+  TOTAL               :  215 genes
+
+Hallmark
+----------------------------------------
+  Pro-apoptotic       :   29 genes
+  Anti-apoptotic      :   25 genes
+  Ambiguous           :   26 genes
+  Unspecified         :   81 genes
+  TOTAL               :  161 genes
+
+GO
+----------------------------------------
+  Pro-apoptotic       :  390 genes
+  Anti-apoptotic      :  525 genes
+  Ambiguous           :   97 genes
+  Unspecified         :    0 genes
+  TOTAL               : 1012 genes
+
+============================================================
+Notes:
+- Categories are consensus annotations derived from multiple sources
+- A gene may appear in multiple source lists
+- GO includes both GO_Pro_Human and GO_Anti_Human annotations
+============================================================
