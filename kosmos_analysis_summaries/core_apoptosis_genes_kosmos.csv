@@ -1,0 +1,46 @@
+human_symbol,mouse_symbol,role,family_pathway,ensembl_human_gene_id,ensembl_mouse_gene_id
+BAX,Bax,Pro,BCL2 family,NA,NA
+BAK1,Bak1,Pro,BCL2 family,NA,NA
+BOK,Bok,Pro,BCL2 family,NA,NA
+BCL2,Bcl2,Anti,BCL2 family,NA,NA
+BCL2L1,Bcl2l1,Anti,BCL2 family,NA,NA
+MCL1,Mcl1,Anti,BCL2 family,NA,NA
+BCL2A1,Bcl2a1,Anti,BCL2 family,NA,NA
+BCL2L11,Bcl2l11,Pro,BH3-only,NA,NA
+BBC3,Bbc3,Pro,BH3-only,NA,NA
+PMAIP1,Pmaip1,Pro,BH3-only,NA,NA
+BID,Bid,Pro,BH3-only,NA,NA
+BAD,Bad,Pro,BH3-only,NA,NA
+BMF,Bmf,Pro,BH3-only,NA,NA
+HRK,Hrk,Pro,BH3-only,NA,NA
+APAF1,Apaf1,Pro,Apoptosome,NA,NA
+CYCS,Cycs,Pro,Intrinsic pathway - mitochondrial,NA,NA
+AIFM1,Aifm1,Pro,Caspase-independent apoptosis,NA,NA
+ENDOG,Endog,Pro,Caspase-independent apoptosis,NA,NA
+DIABLO,Diablo,Pro,SMAC/DIABLO family,NA,NA
+HTRA2,Htra2,Pro,OMI/HtrA2 family,NA,NA
+CASP9,Casp9,Pro,Initiator caspase (intrinsic),NA,NA
+CASP8,Casp8,Pro,Initiator caspase (extrinsic),NA,NA
+CASP10,NA,Pro,Initiator caspase (extrinsic),NA,NA
+CASP3,Casp3,Pro,Effector caspase,NA,NA
+CASP7,Casp7,Pro,Effector caspase,NA,NA
+CASP6,Casp6,Pro,Effector caspase,NA,NA
+CASP2,Casp2,Pro,Initiator caspase,NA,NA
+FAS,Fas,Pro,Death receptor (Fas),NA,NA
+FASLG,Fasl,Pro,Death ligand,NA,NA
+TNF,Tnf,Pro,Death ligand/cytokine,NA,NA
+TNFRSF1A,Tnfrsf1a,Pro,Death receptor,NA,NA
+TNFRSF10A,NA,Pro,TRAIL receptor DR4,NA,NA
+TNFRSF10B,NA,Pro,TRAIL receptor DR5,NA,NA
+TRADD,Tradd,Pro,Death receptor adaptor,NA,NA
+FADD,Fadd,Pro,Death receptor adaptor,NA,NA
+CFLAR,Cflar,Anti,Death receptor inhibitor (cFLIP),NA,NA
+XIAP,Xiap,Anti,IAP family,NA,NA
+BIRC2,Birc2,Anti,IAP family (cIAP1),NA,NA
+BIRC3,Birc3,Anti,IAP family (cIAP2),NA,NA
+BIRC5,Birc5,Anti,IAP family (Survivin),NA,NA
+NOL3,Nol3,Anti,ARC family,NA,NA
+TP53,Trp53,Pro,Transcription factor (pro-apoptotic genes),NA,NA
+SIVA1,Siva1,Pro,Pro-apoptotic regulator,NA,NA
+NFKB1,Nfkb1,Anti,Transcription factor (pro-survival),NA,NA
+RELA,Rela,Anti,Transcription factor (pro-survival),NA,NA

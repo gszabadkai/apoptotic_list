@@ -66,21 +66,30 @@ This repository contains a curated list of **1,232 cell death-related genes** wi
 
 ## Data Sources & Methods
 
-### 1. K-dense Initial List
+### 1. K-dense Initial List (`results/`)
 - Source databases: GO, KEGG, Reactome, MSigDB Hallmark
 - Initial categories: Pro-apoptotic, Anti-apoptotic, Ambiguous, Unspecified
 - 1,232 genes total
 
-### 2. Kosmos Literature Curation
-- Core apoptosis genes: 42 genes from literature review
-- Core CICD genes: 26 genes (caspase-independent cell death)
+### 2. Kosmos Literature Curation (`kosmos_analysis_summaries/`)
+- **Core apoptosis genes**: 42 genes from literature review
+- **Core CICD genes**: 26 genes (caspase-independent cell death)
 - Manual classification of pro-death vs pro-survival roles
 
-### 3. Functional Reclassification (Steps 1-4)
-Ambiguous and unspecified genes were reclassified using:
-1. **DepMap analysis**: CRISPR knockout effects on cell viability
-2. **UniProt annotation**: Functional descriptions
-3. **PRISM drug sensitivity**: Correlation with Bcl-2 antagonists and TRAIL
+### 3. Functional Reclassification via DepMap/PRISM (`kosmos_analysis_summaries/`)
+Ambiguous and unspecified genes were reclassified using multiple approaches:
+
+| Step | Analysis | Description |
+|------|----------|-------------|
+| 1 | DepMap CRISPR | Knockout effects on cell viability |
+| 2 | Alternative approaches | UniProt annotations, literature |
+| 3 | PRISM drug sensitivity | Correlation with Bcl-2 antagonists and TRAIL |
+| 4 | Final integration | Combined all evidence sources |
+
+See `kosmos_analysis_summaries/*.md` for detailed methodology narratives.
+
+> **Note**: Full analysis notebooks and raw data (~2.9GB) are archived separately. 
+> Contact repository owner for access or see Zenodo deposit [DOI pending].
 
 ### 4. MitoCarta 3.0 Integration
 - Mouse mitochondrial proteome annotation
@@ -96,11 +105,40 @@ genes <- read_csv("cell_death_genes_consolidated.csv")
 # Filter for pro-death mitochondrial genes
 mito_prodeath <- genes %>%
   filter(effect == "pro-death", is_mitochondrial)
+
+# Filter for core apoptosis regulators
+core_apoptosis <- genes %>%
+  filter(is_core, pathway %in% c("apoptosis", "both"))
 ```
 
-## Related Files
+```python
+# Python
+import pandas as pd
+genes = pd.read_csv("cell_death_genes_consolidated.csv")
 
-- `results/` - Individual source files from K-dense analysis
+# Pro-survival genes in KEGG
+kegg_prosurvival = genes[(genes['effect'] == 'pro-survival') & genes['in_KEGG']]
+```
+
+## Repository Structure
+
+```
+├── cell_death_genes_consolidated.csv    # Main output file
+├── README_consolidated.md               # This file
+├── results/                             # K-dense source files
+│   ├── final_apoptotic_gene_list.csv
+│   ├── GO_apoptosis_genes.csv
+│   ├── KEGG_apoptosis_genes.csv
+│   ├── Reactome_apoptosis_genes.csv
+│   └── Hallmark_apoptosis_genes.csv
+└── kosmos_analysis_summaries/           # Reclassification analysis
+    ├── 1_initial_depmap_analysis_kosmos.md
+    ├── 2_alternative_approaches_kosmos.md
+    ├── 3_PRISM_drug_sensitivity_kosmos.md
+    ├── 4_final_analysis_apoptotic_genes_kosmos.md
+    ├── core_apoptosis_genes_kosmos.csv
+    └── core_caspase_independent_cell_death_genes_kosmos.csv
+```
 
 ## Citation
 
